@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geo-agent"
+version = "1.0.0"
+description = "Agentic geolocation system using vision LLMs"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.40.0",
+    "Pillow>=10.0.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "rich>=13.0.0",
+    "typer>=0.12.0",
+    "python-telegram-bot>=21.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23"]
+
+[tool.setuptools.packages.find]
+include = ["geo_agent*"]
